@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>index.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50; 
+            margin: 0;
+            padding: 0;
+            transition: background-color 1s ease; 
+            position: relative;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+        }
+        .logo-iframe {
+            width: 100%;
+            height: 350px; 
+            border: none; 
+        }
+        .side-image {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 20%; 
+        }
+        .left-image {
+            left: 0;
+        }
+        .right-image {
+            right: 0;
+        }
+        .bottom-left-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20%; 
+        }
+        .bottom-right-image {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20%;
+        }
+        .middle-left-image {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 20%;
+        }
+        .green-text {
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="C:\Users\TEMP\Downloads\1696573961192.jpg" alt="Middle Left Image" class="middle-left-image">
+
+<div class="container">
+    <div class="header">
+        <iframe src="logo.html" frameborder="0" class="logo-iframe"></iframe>
+        <h1>Welcome to TeKga Trading</h1>
+    </div>
+    <div class="content">
+        <h2>Featured Products</h2>
+
+        <p class="green-text" id="changingText">Enjoy lower prices and quality products.</p>
+        
+        <!-- Add the 10% discount text here -->
+        <p>Get <span style="color: #ffcc00;">10% Discount</span> on your first purchase!</p>
+        <p>Don't have an account yet? <a href="register.html">Register</a></p>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+        <ul>
+            <li><a href="Brazillian_hair.html">Brazillian hair</a></li>
+            <li><a href="hair_products.html">Hair Products</a></li>
+            <li><a href="sneakers.html">Sneakers</a></li>
+        </ul>           
+        <p>Visit our website to explore more products and amazing deals!</p>
+        <a href="shopnow.html">Shop Now</a> 
+        <a href="payment.html">Proceed to Payment</a>
+    </div>
+    <div class="footer">
+        <a href="mailto:info@tekga-trading.com">Contact Us: info@tekga-trading.com</a>
+    </div>
+   <!-- Add this code inside the <body> of your HTML document -->
+   <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=0606859851" target="_blank" rel="noopener">
+            📱 Chat on WhatsApp
+        </a>
+   </div>
+</div>
+<!-- Left Side Image -->
+<img src="C:\Users\TEMP\Downloads\1696574279663.jpg" alt="Left Image" class="side-image left-image">
+
+<!-- Right Side Image -->
+<img src="C:\Users\TEMP\Downloads\1696574894794.jpg" alt="Right Image" class="side-image right-image">
+
+<!-- Bottom Left Image -->
+<img src="C:\Users\TEMP\Downloads\1696574252722.jpg" alt="Bottom Left Image" class="bottom-left-image">
+
+<!-- Bottom Right Image -->
+<img src="C:\Users\TEMP\Downloads\1696573950403.jpg" alt="Bottom Right Image" class="bottom-right-image">
+
+<script>
+    function changeBackgroundColor() {
+        const colors = ['#4CAF50', '#007bff', '#ff5733', '#ffcc00']; 
+        let currentIndex = 0; 
+
+        setInterval(() => {
+            document.body.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        }, 2000); 
+    }
+
+    changeBackgroundColor();
+
+    function changeTextColor() {
+        const textColors = ['#4CAF50', '#007bff', '#ff5733', '#ffcc00'];
+        let textIndex = 0;
+        const changingText = document.getElementById('changingText');
+
+        setInterval(() => {
+           
+            changingText.style.color = textColors[textIndex];
+            textIndex = (textIndex + 1) % textColors.length;
+        }, 5000); 
+    }
+
+    changeTextColor();
+</script>
+</body>
+</html>
